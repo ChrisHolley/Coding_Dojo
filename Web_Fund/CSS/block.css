@@ -31,9 +31,7 @@
     width: 700px;
     padding: 10px;
     background-color: red;
-    display: inline-block;
-    
-    
+    display: inline-block;    
    }
    .subcontents{
     min-height: 200px;
@@ -46,6 +44,7 @@
     min-height: 120px;
     width: 660px;
     margin-left: 5px;
+    margin-top: 10px;
     background-color: purple;
     display: inline-block;
    }
