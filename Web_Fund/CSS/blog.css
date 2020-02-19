@@ -1,0 +1,33 @@
+
+
+p { 
+    color: rgb(0, 0, 0);
+    width: 500px;
+    background-color: darkgrey;
+}
+
+h1 {
+    font-family: sans-serif, helvetica, arial;
+    font-style: oblique;
+    font-size: 88px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: line-through;
+    outline: darksalmon;
+    outline-width: 44px;
+    outline-style: double;
+}
+
+img {
+    height: 444px;
+}
+ul {
+    border: 11px groove darkred;
+    
+}
+a {
+
+}
+.slate {
+
+}
