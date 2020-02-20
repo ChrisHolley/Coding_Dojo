@@ -1,4 +1,6 @@
-
+* {
+    outline: 1px solid pink;
+}
 
 #wrapper {
 background-color: rgb(36, 46, 141);
@@ -17,6 +19,7 @@ width: 1500px;
     box-sizing: border-box;
     min-width: 970px;
     margin-bottom: 15px;
+
     
 }
 
@@ -39,9 +42,10 @@ width: 1500px;
         font-size: 100%;
         /* font: inherit; */
         /* vertical-align: baseline; */
+        text-emphasis: 800;
     }
 
-    #navigation ul {
+    #navigation .list1 {
         margin: 0px;
         padding: 0px;
         text-indent: 30px;
@@ -51,8 +55,13 @@ width: 1500px;
         /* vertical-align: baseline; */
     }
 
-        #navigation .ul2 {
-            text-indent: 30px;
+        .list2 {
+            text-indent: 60px;
+        }
+        
+        a {
+            
+            text-indent: 60px;
         }
 
 #maincontent {
