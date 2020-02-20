@@ -1,14 +1,17 @@
 
+
 #wrapper {
 background-color: rgb(36, 46, 141);
-min-height: 872px;
-width: 970px;
+min-height: 900px;
+padding: 5px;
+width: 1500px;
 }
 
 #header {
     min-height: 100px;
     background-color: rgb(179, 50, 50);
     border-radius: 25px;
+    margin-top: 10px;
     padding-left: 15px;
     padding-top: 10px;
     box-sizing: border-box;
@@ -18,8 +21,10 @@ width: 970px;
 }
 
 #navigation {
-    min-height: 200px;
+    min-height: 350px;
     width: 230px;
+    padding: 15px;
+    margin: 5px;
     background-color: rgb(27, 126, 121);
     display: inline-block;
     vertical-align: top;
@@ -27,11 +32,36 @@ width: 970px;
     box-sizing: border-box;
 }
 
+    #navigation p {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        font-size: 100%;
+        /* font: inherit; */
+        /* vertical-align: baseline; */
+    }
+
+    #navigation ul {
+        margin: 0px;
+        padding: 0px;
+        text-indent: 30px;
+        /* border: 10px; */
+        font-size: 100%;
+        /* font: inherit; */
+        /* vertical-align: baseline; */
+    }
+
+        #navigation .ul2 {
+            text-indent: 30px;
+        }
+
 #maincontent {
     min-height: 690px;
-    width: 700px;
+    width: 1200px;
     background-color: black;
     display: inline-block;
+    margin: 0px 0px 5px 5px;
+    padding: 15px 10px 10px 10px;
     vertical-align: top;
     color: lightblue;
     border-radius: 25px;
@@ -43,17 +73,27 @@ width: 970px;
     background-color: rgb(73, 69, 69);
     height: 80px;
     border-radius: 25px;
-    width: 970px;
+    margin: 5px;
+    width: 960px;
     padding: 5px;
     padding-left: 14px;
     font-size: 20px;
     box-sizing: border-box;
-    
 }
+    
+h1 {
+    color: lightblue;
+}
+    
+
 p {
     vertical-align: middle;
 }    
 
 .midtext {
     vertical-align: middle;
+}
+
+a {
+    color: lightblue;
 }
