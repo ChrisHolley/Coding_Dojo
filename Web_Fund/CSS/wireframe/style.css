@@ -1,0 +1,143 @@
+* {
+    outline: 2px solid purple;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
+pre, form, fieldset, input, textarea, p, blockquote, th, td { 
+	padding: 0;
+	margin: 0;
+	}
+fieldset, img { 
+	border: 0;
+	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+ol, ul {
+	list-style: none;
+	}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-weight: normal;
+	font-style: normal;
+	}
+caption, th {
+	text-align: left;
+	}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%;
+	}
+q:before, q:after {
+	content: '';
+	}
+abbr, acronym { 
+	border: 0;
+    }
+	
+body {
+	background-color: black;
+	
+}
+
+.font {
+	font-family: 'Source Sans Pro' ;
+	font-weight: 100;
+
+}
+
+.break {
+	flex-basis: 100%;
+	height: 0px;
+}
+.background {
+	min-height: 920px;
+	width: 1920px;
+	display: flex;
+	justify-content: center;
+}
+.container {
+	background-color: rgb(147, 122, 165);
+	height: 920px;
+	width: 1225px;
+	align-items: center;
+}
+.header {
+	background-color: rgb(74, 47, 87);
+	height: 110px;
+	width: 1225px;
+	margin-bottom: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+	.header h1 {
+		font-size: 40px;
+		color: rgba(194, 189, 189, 0.836);
+		height: auto;
+		/* font-family: "Trebuchet MS", Helvetica, sans-serif; */
+	}
+.headshot {
+	width:	1225px;
+	margin-bottom: 20px;
+	/* flex-basis: 1225px; */
+	display: flex;
+	justify-content: center;
+
+	
+}
+	.headshot img {
+		height: 325px;
+		
+	}
+
+.hsbar{
+	display: flex;
+	justify-content: space-evenly;
+	width: 444px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	/* padding: 10px; */	
+}
+	.hsbar img {
+		display: flex;
+		width: 40px;
+		border-radius: 50%;
+		
+	}
+.trimenucontainer {
+	display: flex;
+	width: 1225px;
+	justify-content: space-around;
+}
+
+	.trimenu {
+		min-width: 320px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		
+		
+	}
+
+		.trimenuimg img{
+			display: flex;
+			width: 360px;
+			margin-bottom: 5px;
+		}
+		
+			
+		.trimenuhead {
+			width: auto;
+			font-size: 40px;
+		}
+
+		.trimenubar {
+			width: auto;
+		}
+
+			.trimenubar img {
+				width: 20px;
+				border-radius: 50%;
+			}
