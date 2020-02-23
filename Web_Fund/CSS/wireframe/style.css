@@ -43,7 +43,6 @@ body {
 .font {
 	font-family: 'Source Sans Pro' ;
 	font-weight: 100;
-
 }
 
 .break {
@@ -51,14 +50,14 @@ body {
 	height: 0px;
 }
 .background {
-	min-height: 920px;
+	min-height: auto;
 	width: 1920px;
 	display: flex;
 	justify-content: center;
 }
 .container {
 	background-color: rgb(147, 122, 165);
-	height: 920px;
+	height: 930px;
 	width: 1225px;
 	align-items: center;
 }
@@ -130,14 +129,50 @@ body {
 			
 		.trimenuhead {
 			width: auto;
-			font-size: 40px;
+			margin-top: 5px;
+			font-size: 30px;
+			font-family: 'Source Sans Pro' ;
+			font-weight: 100;
+			color: white;
+
 		}
 
 		.trimenubar {
 			width: auto;
+			margin-top: 20px;
 		}
 
 			.trimenubar img {
-				width: 20px;
+				width: 60px;
+				margin-left: 5px;
+				margin-right: 5px;
+				
+				
 				border-radius: 50%;
 			}
+
+	.trademarkbox {
+		display: flex;
+		justify-content: center;
+		margin: 20px;
+	}
+
+	.trademark {
+		
+		font-size: 25px;
+		font-family: 'Source Sans Pro' ;
+		font-weight: 100;
+		color: white;
+		width: auto;
+	}		
+	.trademark2 {
+	
+		font-size: 25px;
+		font-family: 'Source Sans Pro' ;
+		font-weight: 100;
+		margin-left: 8px;
+		color: white;
+		width: auto;
+
+
+	}		 	
