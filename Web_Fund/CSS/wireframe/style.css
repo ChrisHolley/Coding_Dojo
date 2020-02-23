@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 2px solid purple;
-}
+} */
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
 pre, form, fieldset, input, textarea, p, blockquote, th, td { 
@@ -171,7 +171,6 @@ body {
 		font-family: 'Source Sans Pro' ;
 		font-weight: 100;
 		margin-left: 8px;
-		
 		width: auto;
 
 
