@@ -1,0 +1,33 @@
+.navbtn {
+    height: 150px;
+    width: 200px;
+}
+
+@media only screen and (max-width: 480px){
+    .navbtn {
+        background-color: yellow;
+        
+    }
+}
+
+@media only screen and (min-width: 481px){
+    .navbtn {
+        background-color: blue;
+       
+    }
+}
+@media only screen and (min-width: 481px){
+    .navrow {
+        /* background-color: blue; */
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .navbtn {
+        background-color: red;
+    }
+}
+
