@@ -23,8 +23,16 @@
     <div><img id="cat3" class="cat" src="images/cat2.png"></div> <div><img class="ninja" id="ninja3" src="images/ninja2.png"></div>
     <div><img id="cat4" class="cat" src="images/cat3.png"></div> <div><img class="ninja" id="ninja4" src="images/ninja3.png"></div>
     <div><img id="cat5" class="cat" src="images/cat4.png"></div> <div><img class="ninja" id="ninja5" src="images/ninja4.png"></div>
+    
 
 
+
+    <div><img id="cat11" class="cat" src="images/cat0.png" alt-src="images/ninja0.png"></div> <div><img class="ninja" id="ninja11" src="images/ninja0.png"></div>
+    <div><img id="cat22" class="cat" src="images/cat1.png" alt-src="images/ninja1.png"></div> <div><img class="ninja" id="ninja22" src="images/ninja1.png"></div>
+    <div><img id="cat33" class="cat" src="images/cat2.png" alt-src="images/ninja2.png"></div> <div><img class="ninja" id="ninja33" src="images/ninja2.png"></div>
+    <div><img id="cat44" class="cat" src="images/cat3.png" alt-src="images/ninja3.png"></div> <div><img class="ninja" id="ninja44" src="images/ninja3.png"></div>
+    <div><img id="cat55" class="cat" src="images/cat4.png" alt-src="images/ninja4.png"></div> <div><img class="ninja" id="ninja55" src="images/ninja4.png"></div>
+    
     <script>
         $("#cat1").click(function(){
             $("#cat1").css("display", "none");
@@ -46,7 +54,36 @@
             $("#cat5").css("display", "none");
             $("#ninja5").css("display", "block")
         });
-    
+
+
+
+        $("#cat11").click(function(){
+            var temp = $("#cat11").attr("alt-src");
+            $("#cat11").attr("alt-src", $("#cat11").attr("src"));
+            $("#cat11").attr("src", temp);
+        });
+        $("#cat22").click(function(){
+            var temp = $("#cat22").attr("alt-src");
+            $("#cat22").attr("alt-src", $("#cat22").attr("src"));
+            $("#cat22").attr("src", temp);
+        });
+        $("#cat33").click(function(){
+            var temp = $("#cat33").attr("alt-src");
+            $("#cat33").attr("alt-src", $("#cat33").attr("src"));
+            $("#cat33").attr("src", temp);
+        });
+        $("#cat44").click(function(){
+            var temp = $("#cat44").attr("alt-src");
+            $("#cat44").attr("alt-src", $("#cat44").attr("src"));
+            $("#cat44").attr("src", temp);
+        });
+        $("#cat55").click(function(){
+            var temp = $("#cat55").attr("alt-src");
+            $("#cat55").attr("alt-src", $("#cat55").attr("src"));
+            $("#cat55").attr("src", temp);
+        });
+
+
      
     </script>
 
