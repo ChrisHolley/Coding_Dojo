@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .ninja {
+            display: none; 
+        }
+
+        .cat {
+            display: block;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div><img id="cat1" class="cat" src="images/cat0.png"></div> <div><img class="ninja" id="ninja1" src="images/ninja0.png"></div>
+    <div><img id="cat2" class="cat" src="images/cat1.png"></div> <div><img class="ninja" id="ninja2" src="images/ninja1.png"></div>
+    <div><img id="cat3" class="cat" src="images/cat2.png"></div> <div><img class="ninja" id="ninja3" src="images/ninja2.png"></div>
+    <div><img id="cat4" class="cat" src="images/cat3.png"></div> <div><img class="ninja" id="ninja4" src="images/ninja3.png"></div>
+    <div><img id="cat5" class="cat" src="images/cat4.png"></div> <div><img class="ninja" id="ninja5" src="images/ninja4.png"></div>
+
+
+    <script>
+        $("#cat1").click(function(){
+            $("#cat1").css("display", "none");
+            $("#ninja1").css("display", "block")
+        });
+        $("#cat2").click(function(){
+            $("#cat2").css("display", "none");
+            $("#ninja2").css("display", "block")
+        });
+        $("#cat3").click(function(){
+            $("#cat3").css("display", "none");
+            $("#ninja3").css("display", "block")
+        });
+        $("#cat4").click(function(){
+            $("#cat4").css("display", "none");
+            $("#ninja4").css("display", "block")
+        });
+        $("#cat5").click(function(){
+            $("#cat5").css("display", "none");
+            $("#ninja5").css("display", "block")
+        });
+    
+     
+    </script>
+
+</body>
+
+
+</html>
+
+
