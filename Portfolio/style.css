@@ -54,7 +54,8 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img {
-  height: 300px;
+  width: 80%;
+  max-width: 700px;
   display: block;
 }
 
@@ -81,12 +82,23 @@ select {
   }
 } */
 
+a {
+  text-decoration-line: none;
+  text-decoration-color: black;
+  color: #000000;
+}
+
 .ordfirst {
   order: 1;
 }
 
 .ordsec {
   order: 2;
+}
+
+.spacer{ 
+  display: block;
+  height: 300px;
 }
 
 body {
@@ -96,17 +108,68 @@ body {
   font-weight: 600;
 }
 
+.containAll{
+  padding: 150px 0px;
+}
+
 .navbar {
   background-color: rgb(6, 243, 108);
   display: flex;
   justify-content: center;
-  padding: 10px;
+  font-size: 20px;
+  padding:20px;
   position: fixed;
   width: auto;
   right: 0;
   left: 0;
   z-index: 1030;
+  margin: 40px 90px;
 }
+
+    .navcolortrans {
+      
+      animation: nav 19s 0s infinite linear;
+    }
+    @keyframes nav {
+      0% {
+        background:  rgb(0, 0, 0, 0.2)
+      }
+      
+      50% {
+        background: #778899
+      }
+      100% {
+        background: rgb(0, 0, 0, 0.2)
+      }
+    }
+
+  .navbar:before {
+    position: absolute;
+    content: '';
+    border-top: 10px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    left: 0;
+    animation: nav 50s 0s infinite linear;
+  }
+  
+
+  
+  .navbar:after {
+    position: absolute;
+    content: '';
+    border-top: 10px solid black;
+    border-left: 10px solid black;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    right: 0;
+    animation: nav 50s 0s infinite linear;
+  } 
+ 
+
 
 
   .navitem
@@ -119,33 +182,53 @@ body {
   font-size: 90px;
   font-weight: 600;
   justify-content: center;
-  color: #f35626;  /*color animation start*/
-  background-image: linear-gradient(92deg, #f35626 0%,#feab3a 100%);
+  width: auto;
+  margin: auto;
+  color: #000000;  /*colorgradient*/
+  background-image: linear-gradient(92deg, #2629f3 0%,#cccbca 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: hue 60s infinite linear;
+  /* animation: hue 60s infinite line ar; */
 }
 
+  .emCentered img {
+    width: 200px;
+    }
+
+    .notReallyAYellowBelt {
+      animation: nav 6s 0s infinite linear;
+    }
+
+
 #titlechris{
+  display: flex;
+  justify-content: center;
   animation-duration: .5s;
   animation-delay: 0.2s;
   animation-iteration-count: 1;
+  font-size: 70px;
 }
 
 #titleholley {
+  display: flex;
+  justify-content: center;
   animation-duration: .5s;
   animation-delay: 0s;
   animation-iteration-count: 1;
+  font-size: 50px;
 }
 
-
+#pageMarginTop {
+  margin-top: 40px;
+}
 
 
 
 .splash {
     display: flex;
     justify-content: center;
+    
 }    
 
     img .splashimg{
@@ -155,72 +238,36 @@ body {
 .projboxR {
   display: flex;
   justify-content: flex-end;
+  padding-right: 30px 150px 30px 30px;
 }
 
 .projboxL {
   display: flex;
   justify-content: flex-start;
+  padding: 30px 30px 30px 150px;
 }
+
+    .projTitle{
+      text-align: center;
+    }
+
+    .projtext {
+      display: flex;
+      align-items: center;
+      width: 30%;
+    }
+    .center {
+      display: flex;
+      justify-content: center;
+    }
 
 
 /* nav bar exp */
 
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
-}
 
-.menu-area li a {
-  text-decoration: none;
-}
 
-.menu-area li {
-  list-style-type: none;
-}
 
-.custom-padding{
-  padding-top: 10px;
-}
 
-nav {
-  position: relative;
-  width: calc(100% - 60px);
-  margin: 0 auto;
-  padding: 10px 0;
-  background: #333;
-  z-index: 1;
-  text-align: right;
-  padding-right: 2%;
-}
-
-.logo {
-  width: 15%;
-  float: left;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 25px;
-  text-align: left;
-  padding-left: 2%;
-}
-
-.menu-area li {
-  display: inline-block;
-}
-
-.menu-area a {
-  color: #fff;
-  font-weight: 300;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: block;
-  padding: 0 25px;
-  font-size: 14px;
-  line-height: 30px;
-  position: relative;
-  z-index: 1;
-}
 .menu-area a:hover {
   background: tomato;
   color: #fff;
@@ -230,26 +277,121 @@ nav {
   transform: translateY(-50%) rotate(-35deg);
 } */
 
-.navbar:before {
-  position: absolute;
+
+
+
+/* color transition test */
+
+.colortrans {
+  
+  animation: blackgray 50s 0s infinite linear;
+}
+@keyframes blackgray {
+  0% {
+    background: hsl(0,100%,50%);
+  }
+  25% {
+    background: hsl(90,100%,50%);
+  }
+  50% {
+    background: hsl(180,100%,50%);
+  }
+  75% {
+    background: hsl(270,100%,50%);
+  }
+  100% {
+    background: hsl(360,100%,50%);
+  }
+}
+@keyframes yellowbelt {
+  0% {
+    background: rgba(255, 255, 255, 0);
+  }
+  25% {
+    background: hsl(90,100%,50%);
+  }
+  50% {
+    background: hsl(180,100%,50%);
+  }
+  
+  100% {
+    background: hsl(360,100%,50%);
+  }
+}
+
+/* Angled Div */
+.projectmain:before{
+  background: inherit;
+  bottom: 0;
+  top: 0;
   content: '';
-  border-top: 10px solid rgb(6, 243, 108);
-  border-right: 10px solid rgb(6, 243, 108);
-  border-left: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  top: 100%;
+  display: block;
+  height: 800px;
   left: 0;
-}
-
-.navbar:after {
   position: absolute;
-  content: '';
-  border-top: 10px solid rgb(6, 243, 108);
-  border-left: 10px solid rgb(6, 243, 108);
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  top: 100%;
   right: 0;
+  transform: skewY(-8deg);
+  transform-origin: left;
+  z-index: -991;
 }
 
+.projectmain {
+  background: #778899;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+.projectmain:after {
+  background: inherit;
+  top: -185px;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 800px;
+  left: 0%;
+  position: absolute;
+  right: 0;
+  transform: skewY(8deg);
+  transform-origin: left;
+  z-index: -991;
+}
+/* inverse angular div */
+.projectmaininverse:before{
+  background: inherit;
+  bottom: 0;
+  top: 0;
+  content: '';
+  display: block;
+  height: 800px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(8deg);
+  transform-origin: right;
+  z-index: -991;
+}
 
+.projectmaininverse {
+  background: #778899;
+  color: #000;
+  position: relative;
+  z-index: 1;
+}
+.projectmaininverse:after {
+  background: inherit;
+  top: -185px;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 800px;
+  left: 0%;
+  position: absolute;
+  right: 0;
+  transform: skewY(-8deg);
+  transform-origin: right;
+  z-index: -991;
+}
+
+.imagecat {
+  width: 300px;
+}

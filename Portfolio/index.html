@@ -7,97 +7,109 @@
     <title>CHRIS HOLLEY</title>
     <link href="https://fonts.googleapis.com/css?family=Exo:100|Kanit:100|Raleway:100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
-    <div class="custom-padding">
-        <div class="navbar bounce animated">
-            <div class="navitem bounce animated">Projects</div>
-            <div class="navitem bounce animated">Resume</div>
-            <div class="navitem bounce animated">About Me</div>
-        </div>
-    </div>    
-    <div class="custom-padding">
-        <nav>
-          <div class="logo">Logo</div>
-      
-          <ul class="menu-area">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
 
+    
+   
+        <div class="navbar menu-area navcolortrans">
+            <div class="navitem">
+                <a href="#projectlink" target="_blank">
+                    Projects</div>
+                </a>
+            <div class="navitem">
+                <a href="none">   
+                    Resume</div>
+                </a> 
+            <div class="navitem">
+                <a href="https://github.com/ChrisHolley/Coding_Dojo" target="_blank">   
+                    GitHub</div>
+                </a>
+            <div class="navitem">
+                <a href="#aboutme"> About Me
+                </a>
 
-    <div> <!-- Main Body Container-->
-        <div class="splash splashimg"><!--Splash Container-->
-            <a href="" target="_blank"><img src="images/onepunch.jpg"></a>
-            <div>
-                <h1 class="emCentered fadeInLeftBig animated" id="titlechris">Christopher</h1>
-                <h1 class="emCentered fadeInRightBig animated" id="titleholley">Holley</h1>
             </div>
-            >
+        </div>
+     
+    
+    <div class="containAll"> <!-- Body Container-->
+
+        <div><!--Splash Container-->
+          
+            <div>
+                <h1 class="emCentered" id="titlechris" class="colortrans">Christopher Holley</h1>
+                <h1 class="emCentered notReallyAYellowBelt" id="titleholley"><img src="images/web_belt.png"></h1>
+            </div>
+            
 
         </div><!--END Splash Container-->
-
+<div class="spacer"></div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------->
         
-        <div class="projboxR"><!--Project 1 container-->
+        <div class="projboxR projectmain" id="projectlink"><!--Project 1 container-->
             <div class="ordsec"> <!--Project Header & IMG-->
                     <div><!--Header-->
-                        <h1>Project 1</h1>
+                        <h1 class="projTitle">Wireframe</h1>
                     </div><!--Header end-->
-                    <div><!--IMG -->
-                        <img src="images/project1.jpg">
+                    <div class="center"><!--IMG -->
+                        <img src="images/wireframe portfolio.jpg">
                     </div><!--IMG end-->
 
             </div><!--Project Header & IMG-->
 
-            <div class="ordfirst">
+            <div class="ordfirst projtext">
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita quasi rerum ipsa cumque fugit ullam omnis, perspiciatis possimus. Excepturi.
                 </p>
             </div>
         </div><!--End Project 1 container-->
-
+<div class="spacer"></div>
         <div class="projboxL"><!--Project 2 container-->
             <div class="ordfirst"> <!--Project Header & IMG-->
                     <div><!--Header-->
-                        <h1>Project 2</h1>
+                        <h1>Ninja to Cat</h1>
                     </div><!--Header end-->
-                    <div><!--IMG -->
-                        <img src="images/project2.jpg">
+                    <div class="imagecat"><!--IMG -->
+                        <div><img id="cat11" class="cat" src="images/cat0.png" alt-src="images/ninja0.png"></div>
+                        <div><img id="cat22" class="cat" src="images/cat1.png" alt-src="images/ninja1.png"></div>
+                        <div><img id="cat33" class="cat" src="images/cat2.png" alt-src="images/ninja2.png"></div>
+                        <div><img id="cat44" class="cat" src="images/cat3.png" alt-src="images/ninja3.png"></div>
+                        <div><img id="cat55" class="cat" src="images/cat4.png" alt-src="images/ninja4.png"></div>
                     </div><!--IMG end-->
 
             </div><!--Project Header & IMG-->
 
-            <div class="ordsec">
+            <div class="ordsec projtext">
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita quasi rerum ipsa cumque fugit ullam omnis, perspiciatis possimus. Excepturi.
                 </p>
             </div>
         </div><!--End Project 2 container-->
-
-        <div class="projboxR"><!--Project 3 container-->
-            <div class="ordsec"> <!--Project Header & IMG-->
+        <div class="spacer"></div>
+        <div class="projboxR projectmaininverse"><!--Project 3 container-->
+            <div class="ordsec "> <!--Project Header & IMG-->
                     <div><!--Header-->
-                        <h1>Project 3</h1>
+                        <h1>Blog</h1>
                     </div><!--Header end-->
                     <div><!--IMG -->
-                        <img src="images/project3.jpg">
+                        <img src="images/blogproj.jpg">
                     </div><!--IMG end-->
 
             </div><!--Project Header & IMG-->
 
-            <div class="ordfirst">
+            <div class="ordfirst projtext">
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita quasi rerum ipsa cumque fugit ullam omnis, perspiciatis possimus. Excepturi.
                 </p>
             </div>
         </div><!--End Project 3 container-->
+        <!-- ABOUT ME  -->
+        <div id="aboutme"> 
 
+        </div>
 
 
 
@@ -110,8 +122,36 @@
 
 
 
-    </div><!-- Main Body Container-->
+    </div><!-- Body Container-->
 
-    
+    <script>
+
+        // ninja to cat 
+          $("#cat11").click(function(){
+            var temp = $("#cat11").attr("alt-src");
+            $("#cat11").attr("alt-src", $("#cat11").attr("src"));
+            $("#cat11").attr("src", temp);
+        });
+        $("#cat22").click(function(){
+            var temp = $("#cat22").attr("alt-src");
+            $("#cat22").attr("alt-src", $("#cat22").attr("src"));
+            $("#cat22").attr("src", temp);
+        });
+        $("#cat33").click(function(){
+            var temp = $("#cat33").attr("alt-src");
+            $("#cat33").attr("alt-src", $("#cat33").attr("src"));
+            $("#cat33").attr("src", temp);
+        });
+        $("#cat44").click(function(){
+            var temp = $("#cat44").attr("alt-src");
+            $("#cat44").attr("alt-src", $("#cat44").attr("src"));
+            $("#cat44").attr("src", temp);
+        });
+        $("#cat55").click(function(){
+            var temp = $("#cat55").attr("alt-src");
+            $("#cat55").attr("alt-src", $("#cat55").attr("src"));
+            $("#cat55").attr("src", temp);
+        });
+    </script>
 </body>
 </html>
