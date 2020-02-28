@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: solid 2px purple;
-}
+} */
 
 /* Box sizing rules */
 *,
@@ -183,12 +183,12 @@ body {
   font-weight: 600;
   justify-content: center;
   width: auto;
-  margin: auto;
+  margin: auto
   color: #000000;  /*colorgradient*/
-  background-image: linear-gradient(92deg, #2629f3 0%,#cccbca 100%);
+  /* background-image: linear-gradient(92deg, #2629f3 0%,#cccbca 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   /* animation: hue 60s infinite line ar; */
 }
 
@@ -197,7 +197,9 @@ body {
     }
 
     .notReallyAYellowBelt {
-      animation: nav 6s 0s infinite linear;
+      animation: yellowbelt 12s 0s linear;
+      background-color: #000000;
+      border-radius: 25%;
     }
 
 
@@ -213,7 +215,7 @@ body {
 #titleholley {
   display: flex;
   justify-content: center;
-  animation-duration: .5s;
+  animation-duration: 8s;
   animation-delay: 0s;
   animation-iteration-count: 1;
   font-size: 50px;
@@ -305,17 +307,16 @@ body {
 }
 @keyframes yellowbelt {
   0% {
-    background: rgba(255, 255, 255, 0);
-  }
-  25% {
-    background: hsl(90,100%,50%);
+    filter: grayscale(100%);
+    background: rgba(0, 0, 0, 0);
   }
   50% {
-    background: hsl(180,100%,50%);
+    filter: grayscale(100%);
+    background: rgba(0, 0, 0, 1);
   }
-  
   100% {
-    background: hsl(360,100%,50%);
+    filter: grayscale(0%);
+    background: rgba(0, 0, 0, 1);
   }
 }
 
