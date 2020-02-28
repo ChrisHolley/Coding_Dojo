@@ -16,11 +16,11 @@
    
         <div class="navbar menu-area navcolortrans">
             <div class="navitem">
-                <a href="#projectlink" target="_blank">
+                <a href="#projectlink">
                     Projects</div>
                 </a>
             <div class="navitem">
-                <a href="none">   
+                <a href="none" target="_blank">   
                     Resume</div>
                 </a> 
             <div class="navitem">
@@ -92,10 +92,15 @@
         <div class="projboxR projectmaininverse"><!--Project 3 container-->
             <div class="ordsec "> <!--Project Header & IMG-->
                     <div><!--Header-->
-                        <h1>Blog</h1>
+                        <h1>Pac Man</h1>
                     </div><!--Header end-->
                     <div><!--IMG -->
-                        <img src="images/blogproj.jpg">
+                        <div id="container">
+                            <div id="score">0</div>
+                            <div id="world"></div>
+                            <div id="pacman"></div>
+                            
+                        </div>
                     </div><!--IMG end-->
 
             </div><!--Project Header & IMG-->
@@ -153,5 +158,89 @@
             $("#cat55").attr("src", temp);
         });
     </script>
+
+<script> //PACMAN
+document.addEventListener("DOMContentLoaded", function(event) { 
+ 
+
+    var world = [
+        [2,2,2,2,2,2,2,2,2,2,2],
+        [2,0,2,1,2,1,1,1,1,1,2],
+        [2,1,2,1,2,1,2,1,2,1,2],
+        [2,1,2,1,2,1,2,1,2,1,2],
+        [2,1,1,1,2,1,1,1,2,1,2],
+        [2,1,2,1,1,1,1,1,1,1,2],
+        [2,1,2,1,2,2,2,1,2,1,2],
+        [2,1,2,1,2,1,2,1,2,1,2],
+        [2,1,2,1,2,1,2,1,2,1,2],
+        [2,1,1,1,2,1,1,1,1,1,2],
+        [2,2,2,2,2,2,2,2,2,2,2]
+        
+    ];
+
+    var pacman = {
+        x: 0,
+        y: 0
+    };
+
+    function displayWorld(){
+        var output = '';
+
+        for(var i=0; i<world.length; i++){
+            output += "<div class='row'>";
+            for(var j=0; j<world[i].length; j++){
+                if(world[i][j] == 2){
+                    output += "<div class='brick'></div>";
+                }
+                else if(world[i][j] == 1){
+                    output += "<div class='coin'></div>";
+                }
+                if(world[i][j] == 0){
+                    output += "<div class='empty'></div>";
+                }
+
+            }
+            output += "</div>"
+        }
+        // console.log(output);
+        document.getElementById('world').innerHTML = output;
+    }
+
+    function displayPacman(){
+        document.getElementById('pacman').style.top = pacman.y*22+"px";
+        document.getElementById('pacman').style.left = pacman.x*22+"px";
+    }
+
+    displayWorld();
+    displayPacman();
+
+
+        
+    
+    document.onkeydown = function(e){
+        if (e.keycode == 37){
+            pacman.x--;
+        }
+        else if (e.keyCode == 39){
+            pacman.x++;
+        }
+        else if (e.keyCode == 38){
+            pacman.y--;
+        }
+        else if (e.keyCode == 40){
+            pacman.y++;
+        }
+        console.log(e.keycode);
+
+        displayPacman()
+    }
+
+    if(world[pacman.y][pacman.x]==1){
+        world[pacman.y][pacman.x] = 0;
+        displayWorld();
+    }
+
+});
+</script>
 </body>
 </html>
