@@ -83,13 +83,13 @@ dojo = {
    'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
-def printInfo(some_list):
-    # for i in range(len(some_list)):
-    #     print(len(some_list))
-    for a in some_list:
-        print(len(some_list[a]), a)
-        for b in some_list[a]:
-            print(b) 
+def printInfo(some_map):
+    # for i in range(len(some_map)):
+    #     print(len(some_map))
+    for keys in some_map:
+        print(len(some_map[keys]), keys)
+        for vals in some_map[keys]:
+            print(vals) 
             
 print(dojo['locations'])
 
