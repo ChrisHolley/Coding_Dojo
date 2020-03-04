@@ -53,7 +53,7 @@ class User:
         return self
 
 class BankAccount:
-    def __init__(self, int_rate = .01, balance = '99'):
+    def __init__(self, int_rate = .01, balance = '0'):
         self.interest = int_rate
         self.account_balance = balance
     def deposit(self, amount):
