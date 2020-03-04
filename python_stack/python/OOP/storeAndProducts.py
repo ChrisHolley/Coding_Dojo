@@ -16,6 +16,8 @@ class Store:
         self.product_list.append(new_product)
         print(new_product, "added to store:", self.store_name)
     def print_list(self):
+        for p in range(len(self.product_list)):
+            print(self.product_list[p])
         print(self.product_list)
 
 
@@ -43,6 +45,7 @@ tp = Product("charmin", 5, "toiletry")
 tp.print_info()
 store_7_11 = Store("store_7_11")
 store_7_11.add_product(tp)
+store_7_11.print_list
 
 
 
