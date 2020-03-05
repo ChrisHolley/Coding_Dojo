@@ -1,10 +1,11 @@
 from django.shortcuts import render, HttpResponse, redirect
+from time import gmtime, strftime
 
 def index(request):
     context = {
     	"name": "Noelle",
     	"favorite_color": "turquoise",
-    	"pets": ["Bruce", "Fitz", "Georgie"]
+    	"pets": ["Bruce", "Fitz", "Georgie"],
     }
     return render(request, "index.html", context)
 def new(request):
@@ -24,6 +25,12 @@ def name(request, name):
         "namelist": ["Alfred", "Berry", "Celestine", "Dewbert"]
     }
     return render(request, "names.html", context)
+def timedisplay(request):
+    context = {
+        "time": strftime("%Y-%m-%d %H:%M %p", gmtime())
+    }
+    return render(request, "timedisplay.html", context)
+
 
 
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- load Bootstrap -->
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>time display</title>
+</head>
+<body>
+    <div class="main_container"> 
+        <div>  
+            <div class="headbox pb-2 pr-2">
+                <h3>The current date and time:</h3>
+            </div>
+        </div>
+        <div>
+            <div class="timebox">
+                <h1 class="p-4">{{ time }}</h1>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
