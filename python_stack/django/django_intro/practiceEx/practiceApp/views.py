@@ -11,7 +11,12 @@ def index(request):
 def new(request):
     return HttpResponse("placeholder to display a new form to create a new blog")
 def create(request):
-    return HttpResponse("this is the create page")
+    context= {
+        "name_from_form": request.POST['form_name'],
+        "age_from_form": request.POST['form-age'],
+    }
+    return render(request, "create_thing.html", context)
+    # return HttpResponse("this is the create page")
 def show(request, blogId):
     # return HttpResponse("placeholder to display blog number:{}".format(blogId))
     return HttpResponse(f"placeholder to display blog number:{blogId}")
@@ -30,6 +35,11 @@ def timedisplay(request):
         "time": strftime("%Y-%m-%d %H:%M %p", gmtime())
     }
     return render(request, "timedisplay.html", context)
+def update(request, blogId):
+    print(f"you have visited blog {blogId}/update")
+    return redirect(f"/{blogId}")
+
+
 
 
 

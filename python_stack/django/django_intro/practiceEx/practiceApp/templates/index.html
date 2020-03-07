@@ -21,5 +21,17 @@
    <li>{{pet}}</li>
 {% endfor %}
 </ul>
+<form action="/create" method="POST">
+    {%csrf_token %}
+    <label for="form_name">Name</label>
+    <input type="text" name="form_name">
+    <br>
+    <label for="form_age">age</label>
+    <input type="number" name="form_age">
+    <br>
+    <input type="submit" value="let's go!">
+</form>
+
+
 </body>
 </html>
