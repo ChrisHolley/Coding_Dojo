@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>Ninja Gold Assignment</title>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              <strong>Dojo Gold App</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+  
+      <main role="main">
+  
+        <section class="jumbotron text-center">
+          <div class="container">
+            <div>  
+              <h1 class="text-left">Gold: {{ gold }}</h1>
+              <div class="align-self-lg-start">
+              </div>
+            </div>
+            <div class="container d-flex justify-content-between lead">
+              <p class="lead text-muted">
+                <div class="col-sm">
+                  Farm
+                  <p class="lead text-muted">(earns 10-20 golds)</p>
+                  <a href="gold_house" class="btn btn-primary my-2">Find Gold!</a>
+                </div>
+                <div class="col-sm">
+                  Cave
+                  <p class="lead text-muted">(earns 5-10 golds)</p>
+                  <a href="gold_cave" class="btn btn-primary my-2">Find Gold!</a>
+                </div>
+                <div class="col-sm">
+                  House
+                  <p class="lead text-muted">(earns 2-5 golds)</p>
+                  <a href="gold_house" class="btn btn-primary my-2">Find Gold!</a>
+                </div>
+                <div class="col-sm">
+                  Casino
+                  <p class="lead text-muted">(earns/takes 0-50 golds)</p>
+                  <a href="gold_casino" class="btn btn-primary my-2">Find Gold!</a>
+                </div>
+            </div>
+              <a href="reset" class="btn btn-secondary my-2">Reset</a>
+            </p>
+          </div>
+        </section>
+  
+        <div class="album py-5 bg-light">
+          <div class="container">
+             <form action='checkout' method='post'> 
+              {% csrf_token %}
+                <h1 class="mb-3" id='buy'>Activities:</h1>
+                <table class="table table-striped">
+                    <thead>
+                    </thead>
+                    <tbody>
+                    
+                      
+                    <tr>
+                      <td>
+                        Earned 15 gold from the farm! (2013/09/03 6:15pm)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                      Entered a casino and lost 50 gold.. Ouch.. (2013/09/03 6:11pm)
+                      </td>
+                    </tr>
+                    
+                    </tbody>
+                </table>
+  
+                
+            </form>
+
+            
+          </div>
+        </div>
+  
+      </main>
+      
+</body>
+</html>
