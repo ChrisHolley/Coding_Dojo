@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>RNG</title>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+
+   
+  
+      <main role="main">
+  
+        <section class="jumbotron text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Random Name Generator! Count: {{ request.session.counter}} </h1>
+            <div class="lead text-muted">Generation Nation {{ theRNG }} {{ unique_id }}</div>
+            <p>
+              
+                <a href="" class="btn btn-primary my-2">Generate!</a>
+               
+              
+                <a href="reset" class="btn btn-secondary my-2">RESET</a>
+              
+            </p>
+
+          </div>
+        </section>
+  
+        
+  
+      </main>
+      
+</body>
+</html>
