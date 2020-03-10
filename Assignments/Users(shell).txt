@@ -1,0 +1,17 @@
+from databasePracticeApp.models import *
+users.objects.create(first_name="chris", last_name="holley", email_address="asdf@asdf.com", age="35")
+users.objects.create(first_name="bart", last_name="simpson", email_address="simp@asdf.com", age="35")
+users.objects.create(first_name="logan", last_name="x", email_address="berserkerbarrage@asdf.com", age="35")
+users.objects.all()
+users.objects.get(id=3)
+users.objects.get(id=1)
+c = users.objects.get(id=3)
+c.last_name = "pancakes"
+c.save()
+b = users.objects.get(id=2)
+b.delete()
+users.objects.all().order_by("first_name")
+users.objects.all().order_by("-first_name")
+
+
+
