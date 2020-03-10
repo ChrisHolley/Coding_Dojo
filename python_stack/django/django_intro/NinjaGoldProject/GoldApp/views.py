@@ -31,4 +31,4 @@ def gold_casino(request):
     return redirect('/')
 def reset(request): 
     request.session.flush()
-    return redirect('/')
+    return redirect('/')    

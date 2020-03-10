@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Dojo Fruit Store Assignment</title>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              <strong>Databases
+              </strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+  
+      <main role="main">
+  
+        <section class="row">
+          <div class="container col-md-6">
+            <h1 class="jumbotron-heading">Add a Dojo</h1>
+            <form action="" method="POST">
+              <label for="name">Name</label>
+              <input type="text" name="name">
+              <br>
+              <label for="city">City</label>
+              <input type="text" name="city">
+              <br>
+              <label for="state">State</label>
+              <input type="text" name="state">
+              <br>
+              <a href="#buy" class="btn btn-primary my-2">Add dojo</a>
+            </form>
+          </div>
+<div class="container col-md-6">
+  <h1 class="jumbotron-heading">Add a Ninja</h1>
+            <form action="" method="POST">
+              <label for="name">Name</label>
+              <input type="text" name="name">
+              <br>
+              <label for="city">City</label>
+              <input type="text" name="city">
+              <br>
+              <label for="state">State</label>
+              <input type="text" name="state"><br>
+              <a href="#buy" class="btn btn-primary my-2">Add Ninja</a>
+            </form>
+          </div>
+
+        </section>
+        <hr class="mb-4">
+        ALL THE DOJOS
+        <hr class="mb-4">
+        <div class="album py-5 bg-light">
+          <div class="container">
+            
+                <h4 class="mb-3" id='buy'>All The Users</h4>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                          1
+                        </td>
+                        <td>
+                           Eleanor
+                        </td>
+                        <td>
+                           Eleanor@shelltrap.com
+                        </td>
+                        <td>
+                           30
+                        </td>
+                    </tr>
+                    
+                    </tbody>
+                </table>
+  
+                <h4 class="mb-3" id='info'>Add a User</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" name="first_name" placeholder="" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" name="last_name" placeholder="" value="">
+                    </div>
+                </div>
+  
+                <div class="mb-3">
+                    <label for="email">Your Student ID <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" name="student_id" placeholder="123-456-7890">
+                </div>
+              
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Add User</button>
+            
+
+            
+          </div>
+        </div>
+  
+      </main>
+      
+</body>
+</html>
