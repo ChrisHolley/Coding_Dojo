@@ -1,0 +1,39 @@
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+from databasePracticeApp.models import *
+dojos.objects.create(name="Seattle", city="Seattle", state="WA")
+dojos.objects.create(name="Hyrule", city="Zanarkand", state="HY")
+dojos.objects.create(name="Honolulu", city="Honolulu", state="HI")
+all_dojos = dojos.objects.all()
+all_dojos.delete()
+dojos.objects.create(name="Seattle", city="Seattle", state="WA")
+dojos.objects.create(name="Hyrule", city="Zanarkand", state="HY")
+dojos.objects.create(name="Honolulu", city="Honolulu", state="HI")
+ninjas.objects.create(first_name="Agnes", last_name="Shatz", dojo=dojos.objects.get(id=4))
+ninjas.objects.create(first_name="Girtrude", last_name="gnoki", dojo=dojos.objects.get(id=4))
+ninjas.objects.create(first_name="Quag", last_name="Mire", dojo=dojos.objects.get(id=4))
+ninjas.objects.create(first_name="Zelda", last_name="Hyrule", dojo=dojos.objects.get(id=5))
+ninjas.objects.create(first_name="Link", last_name="Hyrule", dojo=dojos.objects.get(id=5))
+ninjas.objects.create(first_name="Uncle", last_name="Hyrule", dojo=dojos.objects.get(id=5))
+ninjas.objects.create(first_name="Keoni", last_name="Kamehameha", dojo=dojos.objects.get(id=6))
+ninjas.objects.create(first_name="Leilani", last_name="Kalakaua", dojo=dojos.objects.get(id=6))
+ninjas.objects.create(first_name="Homuhomunukunukua'po'a'a", last_name="Halemaumau", dojo=dojos.objects.get(id=6))
+this_dojo = dojos.objects.get(id=4)
+ninja = ninjas.objects.filter(dojo=this_dojo)
+ninja
+last_dojo = dojos.objects.get(id=6)
+lastNinjas = ninjas.objects.filter(dojo=last_dojo)
+lastNinjas
+ exit()
+1
+"old dojo"
+python manage.py makemigrations
+python manage.py migrate
+python manage.py shell
+from databasePracticeApp.models import *
+dojos.objects.create(name="Forgotten Dojo", city="Shangri-La", state="XY", desc="The long lost golden dojo that sits at a mountain's peak amongst the clounds")
+
+
+
+
