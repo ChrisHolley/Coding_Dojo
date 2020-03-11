@@ -29,3 +29,5 @@ class ninjas(models.Model):
 
     # def __repr__(self):
     #     return "first_name: {}".format(self.first_name)
+
+

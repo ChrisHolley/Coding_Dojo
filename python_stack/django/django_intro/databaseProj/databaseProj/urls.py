@@ -17,4 +17,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('databasePracticeApp.urls')),
+    path('books/', include('booksAuthorApp.urls')),
 ]
