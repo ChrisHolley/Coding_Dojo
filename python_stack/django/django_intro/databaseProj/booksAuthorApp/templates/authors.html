@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
+    <title>Authors</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 </head>
 <nav class="navbar navbar-light justify-content-start" style="background-color: #e4f2fd;">
     <a class="navbar-brand" href="#">Books/Authors with Templates</a>
-    <a class="navbar-brand btn btn-primary btn-lg" href="authorpage">Authors</a>
-    
-   
+    <a class="navbar-brand btn btn-primary btn-lg" href="/books">Books</a>
   </nav>
 <body>
     <div class="container-fluid">
         <div class="row justify-content-around">
             <div class="col-4">
-                <h4>Add a book</h4>
-                <form action="addBook" method="POST">
+                <h4>Add An Author</h4>
+                <form action="addAuthor" method="POST">
                         {% csrf_token %}
-                    <label for="book_title">Title:</label><br>
-                    <input type="text" name="book_title" id=""><br>
+                    <label for="formFirstName">First Name:</label><br>
+                    <input type="text" name="formFirstName" id=""><br>
+                    <label for="formLastName">Last Name:</label><br>
+                    <input type="text" name="formLastName" id=""><br>
                     
-                    <label for="book_desc">Description:</label><br>
-                    <textarea name="book_desc" id="" cols="30" rows="10"></textarea>
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Add Book</button>
+                    <label for="formNotes">Notes:</label><br>
+                    <textarea name="formNotes" id="" cols="30" rows="10"></textarea>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Add Author</button>
                 </form>
             </div>
 
@@ -41,12 +41,12 @@
                         
                     </thead>
                     <tbody>
-                    {% for book in books %}
+                    {% for author in authors %}
                     <tr>
-                        <td>{{book.id}}</td>
-                        <td>{{book.title}}</td>
-                        <td>{{book.desc}}</td>
-                        <td><a href="{{book.id}}">View</a></td>
+                        <td>{{author.id}}</td>
+                        <td>{{author.first_name}}</td>
+                        <td>{{author.last_name}}</td>
+                        <td><a href="authorpage/{{author.id}}">View</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>    

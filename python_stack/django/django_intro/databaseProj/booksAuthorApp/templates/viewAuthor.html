@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ thisBook.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-">
+                <h1>{{thisAuthor.first_name}} {{ thisAuthor.last_name }}</h1><br>
+                <h3>ID: {{thisAuthor.id}}</h3><br>
+                <p>Notes: {{thisAuthor.notes}}</p><br>
+                {{thisBook.Authors.first_name}}
+            </div>
+        </div>
+        <div class="row">
+            Books:
+            <ul>
+            {% for author in thisAuthor.books.all %}
+                <li>{{author.title}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+</body>
+</html>

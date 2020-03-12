@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 </head>
 <body>
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-">
@@ -20,13 +21,43 @@
         <div class="row">
             Authors:
             <ul>
-            {% for author in bookAuthors %}
-                <li>{{thisBook.Authors}}</li>
-                {{thisBook.author}}
-                {{thisBook.}}
+            {% for author in thisBook.Authors.all %}
+                <li>{{author.first_name}} {{ author.last_name }}</li>
+                
             {% endfor %}
+            </ul>
+        </div>
+        <div class="row">
+           
+            <form action="{{book.id}}" method="POST">
+                {% csrf_token %}
+                <select name="Authors">
+                {% for author in authors %}
+                    {% if book not in author.books.all %}
+                        <option value="{{author.id}}" name="{{author.id}}">{{author.first_name}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            
+
+            <button type="submit">Add Author to the Book</button>
+            </form>
+        </div>
+              </div>
+            
+            <ul>
+            
             </ul>
         </div>
     </div>
 </body>
 </html>
+<!-- 
+<div class="dropdown">
+    <button class="dropbtn">Add an Author</button>
+    <div class="dropdown-content">
+    {% for author in authors %}
+        {% if book_main not in author.books.all %}
+        <a href="#">Link 1</a>
+        {% endif %}
+    {% endfor %} -->

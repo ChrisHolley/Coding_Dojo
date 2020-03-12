@@ -14,37 +14,40 @@ def addBook(request):
     books.objects.create(title=title, desc=desc)
     return redirect('/books')
 
+def addAuthor(request):
+    addFirstName = request.POST['formFirstName']
+    addLastName = request.POST['formLastName']
+    addNotes = request.POST['formNotes']
+    authors.objects.create(first_name=addFirstName, last_name=addLastName, notes=addNotes)
+    return redirect('/books/authorpage')
+
+
 def viewBook(request, bookID):
+    if request.method == 'POST':
+        Authors = authors.objects.get(id=request.POST['Authors'])
+        books.objects.get(id=bookID).Authors.add(Authors)
     this_book = books.objects.get(id=bookID)
     context = {
         "thisBook": books.objects.get(id=bookID),
-        "bookAuthors": this_book.Authors.all()
+        "bookAuthors": this_book.Authors.all(),
+        "authors": authors.objects.all()
     }
     return render(request, "viewBook.html", context)
 
+def authorpage(request):
+    context = {
+        "books": books.objects.all(),
+        "authors": authors.objects.all()
+    }
+    return render(request, "authors.html", context)
 
-# def displayFruit(request):
-#     return render(request, "fruits.html")
-# def checkout(request):
-#     print("Got Post Info*****************************")
-#     print(request.POST)
-#     # 'count': sum(strawberry + raspberry + apple)
-#     request.session['item_counter'] = int(request.POST['strawberry']) + int(request.POST['raspberry']) + int(request.POST['apple'])
-#     context= {
-#         "strawberry": request.POST['strawberry'],
-#         "raspberry": request.POST['raspberry'],
-#         "apple": int(request.POST['apple']),
-#         "firstName": request.POST['first_name'],
-#         "lastName": request.POST['last_name'],
-#         "student_id": request.POST['student_id'],
-#     }
-#     first_name = context['firstName']
-#     last_name = context['lastName']
-#     raspberry = int(context['raspberry'])
-#     apple = int(context['apple'])
-#     strawberry = int(context['strawberry'])
-#     count_int = apple + strawberry + raspberry
-#     count = int(raspberry)+int(apple)+int(strawberry)
-#     print(f"Charging {first_name} {last_name} for {count_int} {count}  {int(strawberry)+int(raspberry)+int(apple)} items ")
-#     return render(request, "checkout.html", context, count)
+def viewAuthor(request, authorID):
+    context= {
+        "thisAuthor": authors.objects.get(id=authorID)
+    }
+    return render(request, "viewAuthor.html", context)
 
+def addAutherToBook(request):
+    book_ID = request.POST['book_id']
+    author_ID = request.POST['author.id']
+    return HttpResponse(book_ID, author_ID)
