@@ -9,10 +9,48 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <title>Hello, world!</title>
+    <title>Show Details</title>
   </head>
   <body>
-    <h1>SHOW DETAILS</h1>
+    
+    <div class="contatiner">
+      
+      <div class="row">
+          <div class="col-1"><!--New Row-->
+
+          </div>
+          <div class="col">
+            <h1>TV Show {{show_info.id}}</h1><br>
+            <p>
+              Title:
+                {{show_info.show_title}}</p>
+            <p>Network: {{show_info.show_network}}</p>
+            <p>Release Date: {{show_info.show_release}}</p>
+            <p>Description: {{show_info.show_desc}}</p>
+            <p>Last Updated: {{show_info.update_at}} UTC</p>
+            <p>
+              <a href="../edit/{{show_info.id}}">Edit</a> | 
+              <a href="../delete/{{show_info.id}}">Delete</a>
+            </p>
+
+          </div>
+          <div class="col-1">
+
+          </div>
+      </div>
+      <div class="row"> <!--New Row-->
+          <div class="col-1">
+
+          </div>
+          <div class="col">
+
+          </div>
+          <div class="col-1">
+
+          </div>
+      </div>
+    </div>
+      
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

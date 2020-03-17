@@ -9,10 +9,46 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <title>Hello, world!</title>
+    <title>Edit Show</title>
   </head>
   <body>
-    <h1><a href="/new">Add a new show</a></h1>
+    <div class="contatiner">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col">
+            <h4>Edit Show ID: {{show_info.id}}</h4>
+            <h1>{{show_info.show_title}}</h1>
+          </div>
+          <div class="col-6"></div>
+          <div class="col">
+            <a href="../">Go Back</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-1"><!--New Row-->
+          </div>
+          <div class="col">
+            <form action="../edit/{{show_info.id}}" method="POST">
+              {% csrf_token %}
+              Title:<br>
+              <input class="form-control" type="text" name="new_title" value="{{show_info.show_title}}" placeholder="{{show_info.show_title}}" id=""><br>
+              Network: <br>
+              <input class="form-control" type="text" name="new_network" value="{{show_info.show_network}}" placeholder="{{show_info.show_network}}" id=""><br>
+              Release Date: <br>
+              <input class="form-control" type="date" name="new_release" value="{{show_info.show_release|date:'Y-m-d'}}" placeholder="{{show_info.show_release}}" id=""><br>
+              Description: <br>
+              <input class="form-control" style="line-height: 10em;" type="text" name="new_desc" value="{{show_info.show_desc}}" placeholder="{{show_info.show_desc}}"><br>
+              <p><input type="submit" value="Update Show!"></p>
+                <a href="../details/{{show_info.id}}">Go to show</a>
+              </p>
+            </form>
+          </div>
+          <div class="col-1">
+
+          </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

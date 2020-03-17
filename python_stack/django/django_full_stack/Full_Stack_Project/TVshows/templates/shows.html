@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <title>Hello, world!</title>
+    <title>Shows List</title>
   </head>
   <body>
     <div class="contatiner">
@@ -29,20 +29,26 @@
                         <th class="">Actions</th>
                     </thead>
                     <tbody>
-                        <td>#</td>
-                        <td>show name</td>
-                        <td>network</td>
-                        <td>release date</td>
+                        {% for show in shows_database %}
+                        <tr>
+                        <td>{{show.id}}</td>
+                        <td>{{show.show_title}}</td>
+                        <td>{{show.show_network}}</td>
+                        <td>{{show.show_release}}</td>
                         <td>
-                            <a href="shows/showdetails">Show</a> | 
-                            <a href="shows/Edit">Edit</a> | Delete</td>
+                            <a href="details/{{show.id}}">Show</a> | 
+                            <a href="edit/{{show.id}}">Edit</a> | 
+                            <a href="delete/{{show.id}}">Delete</a>
+                        </td>
+                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <a href="shows/addShow">Add a New Show</a>
+                <a href="addShow">Add a New Show</a>
             </div>
         </div>
         

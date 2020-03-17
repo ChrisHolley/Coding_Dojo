@@ -1,0 +1,9 @@
+we can use a SSL as a stack
+Insert into a stack (push_ is the same as adding to the front of a SLL
+remobing from a stat(pop) is the same as removing from the front of a SSLthe gola is to use what we know about sll to build a stack with the following methons)
+
+class SLNode:
+    def __init__(self, val):
+
+class Stack:
+    def __init__

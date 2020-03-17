@@ -22,7 +22,7 @@
             <h1 class="col-10 py-3">Add a New Show</h1>
           
             <div class="col py-3">
-              <a class="" href="/allShows">Go Back</a>
+              <a class="" href="/shows">Go Back</a>
             </div>
         </div>
         <div class="col"></div>
@@ -31,10 +31,11 @@
         <div class="col">
         </div>
         <div class="col-8">
-          <form>
+          <form action="create" method="POST">
+            {% csrf_token %}
             <div class="form-group">
-              <label for="exampleInputEmail1">Title</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"">
+              <label name="form_title">Title</label>
+              <input type="text" name="form_title" id="">
             </div>
         </div>
         <div class="col">
@@ -44,14 +45,14 @@
         <div class="col">
         </div>
         <div class="col-4 form-group">
-          <label for="exampleInputEmail1">Network</label> <br>
-          <input type="text" class="form-group" placeholder="">
+          <label name="form_network">Network</label> <br>
+          <input type="text" name="form_network">
         </div>
         <div class="col-4">
-          <label for="exampleInputEmail1">Release Date</label><br>
+          <label for="form_release">Release Date</label><br>
           <section class="row">
-            <input type="date" class="col form-group" placeholder="">
-            <img style="width: 40px" class="" src="{% static '/images/calendar_icon.jpg' %}" alt="">
+            <input type="date" name="form_release" class="col form-group" placeholder="">
+            <img style="width: 30px" class="" src="{% static '/images/calendar_icon.jpg' %}" alt="">
           </section>
         </div>
         <div class="col">
@@ -63,8 +64,8 @@
         <div class="col-8">
           
             <div class="form-group">
-              <label for="exampleInputEmail1">Description</label>
-              <input type="textarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"">
+              <label name="form_desc">Description</label>
+              <input type="textarea" name="form_desc" class="form-control">
             </div>
         </div>
         <div class="col">
@@ -74,11 +75,14 @@
         <div class="col">
         </div>
         <div class="col-8">
-            <a href=""></a>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Add Show</button>
         </div>
         <div class="col">
         </div>
       </div>
+    </form>
+    </div>
+
     </div>
     
     
