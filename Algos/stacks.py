@@ -1,22 +1,19 @@
-we can use a SSL as a stack
-Insert into a stack (push_ is the same as adding to the front of a SLL
-remobing from a stat(pop) is the same as removing from the front of a SSLthe gola is to use what we know about sll to build a stack with the following methons)
+str1 = "Hello! My name (the best name ever) is Cody!" # This is a valid braces configuration
+str2 ="({[]})" # This is also a valid braces configuration
+str3 ="({])}" # This is NOT  avalid braces configuration
 
-class SLNode:
-    def __init__(self, val):
-        self.value = val
-        self.next = None
-class Stack:
-    def __init__(Self):
-        self.head = None
+# Given a string, write an algorithm that determines whether or not the configuration
+# of the braces in that string are valid
+def ValidBraces(string):
+    for (i = 0; i < str.length; i++):
+        if (str[i]=='(')
+            count_left++
+        else if (str[i]==")")
+            count_right++
+    if count_left == count_right
+        return true
 
-# challenge for you guys
-    def Push(self, val):
-        #this code should handle pushing into a stack
-        if self.head == None:
-    def Pop(self):
-        #this code should handle removing from a stack
-        pass
-    def Peek(self):
-        #this code should handle showing what is at the top of a stack
-        pass
+    # return Boolean of whether or not the string has a valid brace configuration 
+
+
+ValidBraces("Hello (something{else)}")

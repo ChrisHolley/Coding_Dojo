@@ -39,6 +39,13 @@
               <input class="form-control" type="date" name="new_release" value="{{show_info.show_release|date:'Y-m-d'}}" placeholder="{{show_info.show_release}}" id=""><br>
               Description: <br>
               <input class="form-control" style="line-height: 10em;" type="text" name="new_desc" value="{{show_info.show_desc}}" placeholder="{{show_info.show_desc}}"><br>
+              {% if messages %}
+                <ul class="messages">
+                  {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+          {% endif %}
               <p><input type="submit" value="Update Show!"></p>
                 <a href="../details/{{show_info.id}}">Go to show</a>
               </p>
