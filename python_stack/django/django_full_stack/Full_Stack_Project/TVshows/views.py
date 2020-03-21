@@ -35,7 +35,7 @@ def create_show(request):
         release = request.POST['form_release']
         desc = request.POST['form_desc']
         new_show = Show.objects.create(show_title=title, show_network=network, show_release=release, show_desc=desc)
-    return redirect(f"/shows/details/{new_show.id}")
+        return redirect(f"/shows/details/{new_show.id}")
 
 def show_edit(request, show_id):
     if request.method=='POST':

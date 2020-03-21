@@ -31,12 +31,14 @@
         <div class="col-5"> <!--col 1 Form begins--> 
           <div class="row">
             <form class="row" action="create_user" method="POST">
+              {% csrf_token %}
               <div class="col-5">
-                <label class="mb-2" for="form_first_name">First Name:</label><br>
-                <label class="mb-2" for="form_last_name">Last Name:</label><br>
-                <label class="mb-2" for="form_email">Email:</label><br>
-                <label class="mb-2" for="form_password">Password:</label><br>
-                <label class="mb-2" for="form_confirm_pw">Confirm PW:</label><br>
+                <label class="mb-2" for="form_first_name">First Name </label><br>
+                <label class="mb-2" for="form_last_name">Last Name </label><br>
+                <label class="mb-2" for="form_email">Email </label><br>
+                <label class="mb-2" for="form_birthday">Birthday </label><br>
+                <label class="mb-2" for="form_password">Password </label><br>
+                <label class="mb-2" for="form_confirm_pw">Confirm PW </label><br>
                 
               </div>
               <div class="col-7">
@@ -45,6 +47,7 @@
                 <input class="mb-2" type="text" name="form_last_name" id="">
                 <br>
                 <input class="mb-2" type="text" name="form_email" id="">
+                <input class="mb-2" type="date" name="form_birthday" id="">
                 <br>
                 <input class="mb-2" type="text" name="form_password" id="">
                 <br>
@@ -57,7 +60,8 @@
         <div class="col-2"></div>
         <div class="col-5"><!--col 2 Login Form-->
           <div class="row">
-            <form class="row" action="login_user" method="POST">
+            <form class="row" action="/login/" method="POST">
+              {% csrf_token %}
               <div class="col-5">
                 <label class="mb-2" for="login_email">Email</label><br>
                 <label class="mb-2" for="login_password">Password</label><br>
@@ -75,7 +79,7 @@
       </div>
       <!-- error message row -->
         <div class="row">  
-          <div class="col-8">
+          <div class="col-8 mx-auto">
             {% if messages %}
                   <ul class="messages">
                     {% for message in messages %}
