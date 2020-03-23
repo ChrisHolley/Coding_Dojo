@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'home',
     'TVshows',
     'loginApp',
+    'THEWALL',
+    'DojoReads',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>THEWALL</title>
+</head>
+<style>
+  * {
+    /* border: solid pink 2px; */
+  }
+</style>
+<body>
+  <div class="container">
+  <div class="row row-cols-4">
+    <div class="col-5">
+      <h2>CodingDojo Wall</h2>
+    </div>
+    <div class="col-3"></div>
+    <div class="col-3">
+      <h4> Welcome {{user.first_name}}</h4>
+    </div>
+    <div class="col-1">
+      <a href="/login/logout">log off</a>
+    </div>
+  </div>
+  <div class="row" style="border: solid 1px black;"></div>
+  <div class="row row-cols-4">
+    <div class="col-1"></div> <!--Spacer column-->
+    <div class="col-8"> <!--main column NEW POST FORM-->
+      <form action="form_new_post" method="POST">
+        {% csrf_token %}
+        Post a message<br>
+        <textarea name="New_Post" id="" cols="98" rows="8"></textarea> <br>
+        <button type="submit" class="float-right btn btn-primary">Post it!</button>
+      </form>
+      <p>
+      {% for message in All_Messages reversed %}
+        <h6 class="text-primary">{{message.user.first_name}} {{message.user.last_name}} - {{message.created_at}} said:</h6>
+        <h4>{{message.message}}</h4> <!--New message-->
+          {% for comment in All_Comments %} 
+            {% if comment.messages.id == message.id %} <!--checks for matching message IDs-->
+              <h6 class="pb-2 text-success">{{comment.user.first_name}} {{comment.user.last_name}} - {{comment.created_at}}</h6>
+              {% if user.id == comment.user.id %}
+                <form action="/wall/form_delete_comment" method="POST">
+                  {% csrf_token %}
+                  <input type="hidden" name="delete_comment_id" value="{{comment.id}}">
+                  <button class="btn btn-danger float-right" style="margin-right: 110px;">Delete Comment</button>
+                </form>
+              {% endif %}
+              <h5 style="margin-left: 25px" class="pb-2 text-primary">{{comment.comment}}</h5>
+            {% endif %}
+          {% endfor %}
+            <form action="form_new_comment" method="POST">
+              {% csrf_token %}
+              Comment on this message<br>
+              <textarea name="New_Comment" id="" cols="98" rows="2"></textarea> <br>
+              <input type="hidden" name="msg_id" value="{{message.id}}">
+              <button type="submit" class="float-right btn btn-success">Comment!</button>
+            </form>
+      {% endfor %}
+      </p>
+    </div> 
+    <div class="col-3"></div> <!--Spacer column-->
+  </div>
+  <div class="row row-cols-4">
+    <div class="col">Column1</div>
+    <div class="col">
+      {% if messages %}
+<ul>
+{% for message in messages %}
+<li>{{ message }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+    </div>
+    <div class="col">Column3</div>
+    <div class="col">Column4</div>
+  </div>
+</div>
+</body>
+</html>

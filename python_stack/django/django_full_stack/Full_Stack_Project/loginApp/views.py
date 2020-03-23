@@ -7,14 +7,14 @@ def logout(request):
     request.session.flush()
     return redirect('/login')
 
-def welcome(request):
-    if 'user_id' in request.session:
-        print(user.objects.get(id=request.session['user_id']))
-        context = {
-            'user' : user.objects.get(id=request.session['user_id'])
-        }
-        return render(request, 'welcome.html', context)
-    return render(request, 'login.html')
+# def welcome(request):
+#     if 'user_id' in request.session:
+#         print(user.objects.get(id=request.session['user_id']))
+#         context = {
+#             'user' : user.objects.get(id=request.session['user_id'])
+#         }
+#         return render(request, 'Full_stack_Project/THEWALL/welcomeWall.html', context)
+#     return render(request, 'login.html')
 
 #POST
 def login(request):
@@ -42,7 +42,7 @@ def login(request):
                 request.session['user_id'] = logged_user.id
                 # never render on a post, always redirect!
                 print("login succesful")
-                return redirect('/login/welcome')
+                return redirect('/wall/welcome')
             else:
                 messages.error(request, "wrong password")
                 return redirect('/login')
@@ -72,5 +72,5 @@ def create_user(request):
         print(f"password: {rawPassword} ")
         print(f"hash: {hashPass} ")
         newUser = user.objects.create(first_name=fname, last_name=lname, email=email, birthday=birthday, password=hashPass)
-        request.session['User_id'] = newUser.id
-        return redirect("/login/welcome")
+        request.session['user_id'] = newUser.id
+        return redirect("/wall/welcome")

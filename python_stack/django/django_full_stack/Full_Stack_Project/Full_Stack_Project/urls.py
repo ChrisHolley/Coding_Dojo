@@ -19,4 +19,6 @@ urlpatterns = [
     path('', include('home.urls')),
     path('shows/', include('TVshows.urls')),
     path('login/', include('loginApp.urls')),
+    path('wall/', include('THEWALL.urls')),
+    path('dojoreads/', include('DojoReads.urls')),
 ]
