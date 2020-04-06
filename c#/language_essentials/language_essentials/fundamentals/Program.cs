@@ -36,7 +36,7 @@ namespace fundamentals
             {
                 if (h % 3 == 0 && h % 5 == 0)
                 {
-                    System.Console.WriteLine("FizzBuzz");;
+                    System.Console.WriteLine("FizzBuzz");
                 }
 
                 else if (h % 3 == 0)
@@ -124,6 +124,27 @@ namespace fundamentals
             {
                 System.Console.WriteLine(entry.Key + " likes " + entry.Value);
             }
+            List<object> ActuallyList = new List<object>();
+            ActuallyList.Add(7);
+            ActuallyList.Add(28);
+            ActuallyList.Add(-1);
+            ActuallyList.Add(true);
+            ActuallyList.Add("chair");
+            foreach (var item in ActuallyList)
+            {
+                System.Console.WriteLine(item);
+                System.Console.WriteLine(item.GetType());
+            }
+            int sum = 0;
+            for (int p = 0; p < ActuallyList.Count; p++)
+            {
+                System.Console.WriteLine(ActuallyList[p]);
+                if (ActuallyList[p] is int)
+                {
+                    sum += (int)ActuallyList[p];
+                }
+            }
+            System.Console.WriteLine(sum);
 
         }
     }
