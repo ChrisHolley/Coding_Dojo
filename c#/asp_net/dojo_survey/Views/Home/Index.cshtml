@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5" style="border: black solid 2px;">
+        <form action="result" method="post">
+            <div class="row">
+                <div class="col-6">Your Name:</div>
+                <div class="col-6 my-1">
+                    <input type="text" name="formName" id="">
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-6">Dojo Location:</div>
+                <div class="col-6 my-1">
+                    <div class="form-group">
+                        <select class="form-control" name="formDojoLocation" id="">
+                            <option value="sanjose">San Jose</option>
+                            <option value="seattle">Seattle</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">Favorite Language:</div>
+                <div class="col-6 my-1">
+                    <div class="form-group">
+                        <select class="form-control" for="formDojoLocation" id="">
+                            <option value="csharp">C#</option>
+                            <option value="python">Python</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                Comment(optional): <br>
+            </div>
+            <div class="row">
+                <textarea name="formComment" id="" cols="100" rows="4"></textarea>
+            </div>
+            <div class="row m-1">
+                <div class="col-2 ml-auto">
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                </div>
+            </div>
+            
+        </form>
+
+    </div>
+</body>
+</html>
