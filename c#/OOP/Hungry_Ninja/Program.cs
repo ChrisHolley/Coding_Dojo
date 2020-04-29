@@ -6,7 +6,19 @@ namespace Hungry_Ninja
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Ninja Jake = new Ninja();
+            Buffet NinjaCafe = new Buffet();
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
+            Jake.Eat(NinjaCafe.Serve());
         }
     }
 }
