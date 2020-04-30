@@ -6,7 +6,10 @@ namespace Human
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Human Conrad = new Human("Conrad");
+            Human Daniel = new Human("Daniel");
+            Conrad.Attack(Daniel);
         }
     }
+
 }
