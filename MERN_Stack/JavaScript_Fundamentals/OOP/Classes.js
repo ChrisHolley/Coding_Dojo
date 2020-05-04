@@ -29,3 +29,4 @@ class M5 extends Vehicle {
 }
 const m5 = new M5("Blue");
 m5.childFunction();
+m5.drive();
