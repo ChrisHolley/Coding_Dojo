@@ -1,21 +1,23 @@
 import React from 'react';
 import './App.css';
-import MyNewComponent from './components/MyNewComponent';
-import PersonCard from './components/PersonCard';
+import PersonCard from './components/component'
 
 function App() {
   return (
     <div className="App">
-      <MyNewComponent someText={"Hello World"}/>
-      <MyNewComponent someText={"What are props?"}/>
-      <MyNewComponent someText={"Because I have no idea"}/>
-      =====================================
-      <PersonCard firstName={"Jane"} lastName={"Doe"} age={45} hairColor={"Black"}/>
-      <PersonCard firstName={"John"} lastName={"Smith"} age={88} hairColor={"Brown"}/>
-      <PersonCard firstName={"Millard"} lastName={"Fillmore"} age={50} hairColor={"Brown"}/>
-      <PersonCard firstName={"Maria"} lastName={"Smith"} age={62} hairColor={"Brown"}/>
+      <PersonCard firstName="Ted" lastName="Crisp" age="31" hairColor="Brown"/>
+      <PersonCard firstName="Veronica" lastName="Palmer" age="35" hairColor="Blonde"/>
+      <PersonCard firstName="Linda" lastName="Zwordling" age="29" hairColor="Blonde"/>
+      <PersonCard firstName="Phil" lastName="Myman" age="41" hairColor="Black"/>
+      <PersonCard firstName="Lem" lastName="Hewitt" age="38" hairColor="Black"/>
     </div>
   );
 }
 
 export default App;
+// Create a component called PersonCard that accepts the following props: 
+
+// firstName
+// lastName
+// age
+// hairColor
