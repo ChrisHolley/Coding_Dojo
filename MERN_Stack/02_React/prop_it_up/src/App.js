@@ -5,11 +5,21 @@ import PersonCard from './components/component'
 function App() {
   return (
     <div className="App">
-      <PersonCard firstName="Ted" lastName="Crisp" age="31" hairColor="Brown"/>
-      <PersonCard firstName="Veronica" lastName="Palmer" age="35" hairColor="Blonde"/>
-      <PersonCard firstName="Linda" lastName="Zwordling" age="29" hairColor="Blonde"/>
-      <PersonCard firstName="Phil" lastName="Myman" age="41" hairColor="Black"/>
-      <PersonCard firstName="Lem" lastName="Hewitt" age="38" hairColor="Black"/>
+      <PersonCard firstName="Ted" lastName="Crisp" age={31} hairColor="Brown">
+        
+      </PersonCard>
+      <PersonCard firstName="Veronica" lastName="Palmer" age={35} hairColor="Blonde">
+
+      </PersonCard>
+      <PersonCard firstName="Linda" lastName="Zwordling" age={29} hairColor="Blonde">
+
+      </PersonCard>
+      <PersonCard firstName="Phil" lastName="Myman" age={41} hairColor="Black">
+
+      </PersonCard>
+      <PersonCard firstName="Lem" lastName="Hewitt" age={38} hairColor="Black">
+
+      </PersonCard>
     </div>
   );
 }

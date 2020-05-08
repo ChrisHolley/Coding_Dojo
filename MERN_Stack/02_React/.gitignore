@@ -3,15 +3,10 @@ README.md
 package-lock.json
 package.json
 **/public/favicon.ico
-**/public/index.html
 **/public/logo192.png
 **/public/logo512.png
 **/public/manifest.json
 **/public/robots.txt
-**/src/App.css
 **/src/App.test.js
-**/src/index.css
-**/src/index.js
 **/src/logo.svg
-**/src/serviceWorker.js
 **/src/setupTests.js
