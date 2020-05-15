@@ -1,66 +1,42 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const UserForm = (props) => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [cfmPassword, setcfmPassword] = useState("");
+const Form = props => {
+    const{inputs, setInputs} = props;
 
-    const createUser = (e) => {
-        e.preventDefault();
-        const newUser = { firstName, lastName, email, password };
-        console.log(`Welcome, ${newUser}`)
-    }
-        
-
+    const onChange = (e) => {
+        setInputs({
+            ...inputs,
+            [e.target.name]: e.target.value
+        });
+    };
+    
     return(
-        <div>
-            <form onSubmit={ createUser }>
-                <div>
-                    <label> First Name: </label>
-                    <input type="text" onChange={ (e) => setFirstName(e.target.value)} />
-                </div>
-                <div>
-                    <label> Last Name: </label>
-                    <input type="text" onChange={ (e) => setLastName(e.target.value)} />
-                </div>
-                <div>
-                    <label> Email: </label>
-                    <input type="text" onChange={ (e) => setEmail(e.target.value)} />
-                </div>
-                <div>
-                    <label> Password: </label>
-                    <input type="password" onChange={ (e) => setPassword(e.target.value)} />
-                </div>
-                <div>
-                    <label> Comfirm Password: </label>
-                    <input type="password" onChange={ (e) => setcfmPassword(e.target.value)}/>
-                </div>
-                <div>
-                    Your Form Data
-                </div>
-                <div>
-                    <p>
-                        First Name   {firstName}
-                    </p>
-                    <p>
-                        Last Name   {lastName}
-                    </p>
-                    <p>
-                        Email   {email}
-                    </p>
-                    <p>
-                        Password   {password}
-                    </p>
-                    <p>
-                        Confirm   {cfmPassword}
-                    </p>
-                </div>
+        <form>
+            <div className="form-group">
+                <label htmlFor="firstName">First Name</label>
+                <input onChange={onChange} type="text" name="firstName" />
+            </div>
+            <div className="form-group">
+            <label htmlFor="lastName">Last Name</label>
+            <input onChange={onChange} type="text" name="lastName" />
+                
+            </div>
+            <div className="form-group">
+            <label htmlFor="email">email</label>
+            <input onChange={onChange} type="text" name="email" />
 
-            </form>
-        </div>
+            </div>
+            <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input onChange={onChange} type="password" name="password" />
+
+            </div>
+            <div className="form-group">
+            <label htmlFor="confirmPassword">confirm password</label>
+            <input onChange={onChange} type="password" name="confirmPassword" />
+
+            </div>
+        </form>
     );
 };
-
-export default UserForm;
+export default Form;

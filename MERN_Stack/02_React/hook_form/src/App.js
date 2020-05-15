@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useState } from "react";
 import './App.css';
-import UserForm from './component/form'
+import Form from './component/form';
+import Results from './component/results';
 
 function App() {
+  const [ state, setState ] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+
+
   return (
     <div className="App">
-      <UserForm />
+      <Form inputs={state} setInputs={setState} />
+      <Results data={state} />
     </div>
   );
 }
