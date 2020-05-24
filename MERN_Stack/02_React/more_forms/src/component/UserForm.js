@@ -12,7 +12,6 @@ const UserForm = props => {
     return(
         <form>
             <div>
-               
                 {
                     inputs.firstName.length > 2 || inputs.firstName.length == 0 ?
                     <p></p> : <p>Name must be greater than 2 characters</p>
